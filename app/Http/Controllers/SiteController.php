@@ -22,8 +22,7 @@ class SiteController extends Controller
   public function blog()
   {
     $posts = Post::all();
-    dd($posts);
-    return view('pages.blog');
+    return view('pages.blog', compact('posts'));
   }
 
 }

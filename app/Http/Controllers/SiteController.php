@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
+
 
 class SiteController extends Controller
 {
@@ -19,6 +21,8 @@ class SiteController extends Controller
 
   public function blog()
   {
+    $posts = Post::all();
+    dd($posts);
     return view('pages.blog');
   }
 
